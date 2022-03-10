@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'MainScreen.dart';
+
 OutlineInputBorder _textFieldBorder = const OutlineInputBorder(
   borderRadius: BorderRadius.all(Radius.circular(30)),
   borderSide: BorderSide(
@@ -36,6 +38,7 @@ class _AuthentificationState extends State<Authentification> {
       if (usPas==_passData) {
         pr.setBool('isLogin', true);
         _hintUser = 'Введите телефон и пароль';
+        readUserPhone();
         Navigator.pushNamed(context, '/mainscreen');
       } else {
         setState(() {

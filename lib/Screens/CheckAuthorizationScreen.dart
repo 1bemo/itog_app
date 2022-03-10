@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:itog_app/Screens/SettingsScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:itog_app/Screens/MainScreen.dart';
@@ -22,6 +23,7 @@ class _CheckAuthorizationState extends State<CheckAuthorization> {
         '/': (context) => const RootScreen(),
         '/authscreen': (context) => const Authentification(),
         '/mainscreen': (context) => const MainScreen(),
+        '/settings': (context) => const SettingsScreen(),
       },
     );
   }
