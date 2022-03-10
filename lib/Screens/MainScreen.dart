@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+String globalUser = 'notAUser';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -10,10 +13,13 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-          child: Text('Это главная страница')
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(globalUser),
       ),
-    );;
+      body: Center(
+          child: Text('Ваш логин: $globalUser')
+      ),
+    );
   }
 }
