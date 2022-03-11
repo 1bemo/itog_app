@@ -137,6 +137,18 @@ class _AuthentificationState extends State<Authentification> {
                   },
                   child: const Text('Вход')
                 ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 10),
+                child: Text(
+                  'Пометка для Айрата Галямова\n'
+                  'Телефон: 89514549698\n'
+                  'Пароль: qwerty77',
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Colors.red[900]
+                  ),
+                ),
               )
             ],
           )
